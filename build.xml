@@ -1,0 +1,11 @@
+<project name="advent-of-code" default="prepare-release" basedir=".">
+  <property name="project.title" value="AdventOfCode"/>
+  <property name="project.description" value="Coding Exercises"/>
+  <property name="use.ivy" value="true" />
+
+  <target name="test" depends="init,compile,test-specific" description="Runs the JUnit tests"/>
+
+  <property environment="env" />
+  <property name="buildCommon.dir" location="${env.BUILD_COMMON_HOME}"/>
+  <import file="${buildCommon.dir}/build-groovy.xml"/>
+</project>
