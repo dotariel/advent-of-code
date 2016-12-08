@@ -6,7 +6,7 @@ class Main {
   
   public static void main(String[] args) {
     new Main().getTotalDistance()
-    new Main().getFirstLocationVisitedTwice()
+    new Main().getDistanceToFirstLocationVisitedTwice()
   }
 
   private void getTotalDistance() {
@@ -18,7 +18,7 @@ class Main {
     println "Final Distance: " + location.getDistance(new Location())
   }
 
-  private void getFirstLocationVisitedTwice() {
+  private void getDistanceToFirstLocationVisitedTwice() {
     def location = new Location()
     def input = InputReader.readInput("resources/Day1/input.txt")
     def inputList = input.split(",")
