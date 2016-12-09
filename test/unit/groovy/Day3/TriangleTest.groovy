@@ -2,7 +2,7 @@ package aoc.day3
 
 import org.junit.*
 
-class Day3Test {
+class TriangleTest {
 
   @Test
   public void should_determine_valid_triangle() {
