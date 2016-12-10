@@ -23,10 +23,6 @@ class Signal {
 
     List cols =  (0..colSizes[0]-1).collect { n -> rows.collect { it[n] } }
 
-    return _decode(cols)
-  }
-
-  protected String _decode(List<List> matrix) {
-    matrix.collect(strategy.bind()).join()
+    cols.collect(strategy.bind()).join()
   }
 }
