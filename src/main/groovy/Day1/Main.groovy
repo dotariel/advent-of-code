@@ -11,7 +11,7 @@ class Main {
 
   private void getTotalDistance() {
     def location = new Location()
-    def input = InputReader.readInput("resources/Day1/input.txt")
+    def input = InputReader.read("resources/Day1/input.txt")
 
     input.split(",").each { m -> location.move(m) }
 
@@ -20,7 +20,7 @@ class Main {
 
   private void getDistanceToFirstLocationVisitedTwice() {
     def location = new Location()
-    def input = InputReader.readInput("resources/Day1/input.txt")
+    def input = InputReader.read("resources/Day1/input.txt")
     def inputList = input.split(",")
 
     inputList.each { location.move(it) }

@@ -22,6 +22,6 @@ class SimplePasswordCracker extends PasswordCracker {
     hashResults.sort { a,b -> a.index <=> b.index }
       .collect { r -> r.hash[5] }
       .join("")
-    }
+  }
 }
 

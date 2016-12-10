@@ -21,7 +21,7 @@ class Main {
   }
 
   private static List getInputs() {
-    def input = InputReader.readInput("resources/Day4/input.txt")
+    def input = InputReader.read("resources/Day4/input.txt")
     def inputs = []
 
     input.eachLine { l -> inputs << l }

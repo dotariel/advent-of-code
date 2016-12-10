@@ -9,7 +9,7 @@ class Main {
   }
 
   private static void getCode(KeyPad keyPad) {
-    def input = InputReader.readInput("resources/Day2/input.txt")
+    def input = InputReader.read("resources/Day2/input.txt")
     def inputList = []
 
     input.eachLine { l -> inputList << l }

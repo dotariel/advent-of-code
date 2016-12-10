@@ -9,7 +9,7 @@ class Main {
   }
 
   private static void getValidTriangles() {
-    def input = InputReader.readInput("resources/Day3/input.txt")
+    def input = InputReader.read("resources/Day3/input.txt")
     def inputList = []
 
     input.eachLine { l -> inputList << l }
@@ -17,7 +17,7 @@ class Main {
   }
 
   private static void getValidTrianglesByColumn() {
-    def input = InputReader.readInput("resources/Day3/input.txt")
+    def input = InputReader.read("resources/Day3/input.txt")
 
     def rows = input.split('\n').collect { line ->
       line.split(',').with { parts ->
