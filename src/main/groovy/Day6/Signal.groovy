@@ -15,7 +15,7 @@ class Signal {
 
   public String decode() {
     List splits = this.message.split('\n')
-    List rows = splits.collect { r -> r.collect { c -> c }}
+    List rows = splits.collect { r -> r.collect() }
     List colSizes = rows.collect { c -> c.size() }.unique()
     
     if (colSizes.size() != 1) 
