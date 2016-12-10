@@ -7,8 +7,12 @@ class IpAddress7Test {
   @Test
   public void should_parse_hypernet_regions() {
     def ip = new IpAddress7('abcdefg[foo]hijklmn[bar]opqrstuv[baz]xyz')
-
     assert ip.hypernetRegions == ['foo', 'bar', 'baz']
+  }
+
+  @Test
+  public void should_parse_supernet_regions() {
+    def ip = new IpAddress7('abcdefg[foo]hijklmn[bar]opqrstuv[baz]xyz')
     assert ip.supernetRegions == ['abcdefg', 'hijklmn', 'opqrstuv', 'xyz']
   }
 
