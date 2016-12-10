@@ -16,9 +16,7 @@ class IpAddress7 {
 
   public boolean supportsSsl() {
     
-    def abaSequences = supernetRegions.collect { r ->  
-      getSequences(r, 3).findAll { s -> isAba(s) } 
-    }.flatten()
+    def abaSequences = supernetRegions.collect { r -> getSequences(r, 3).findAll { isAba(it) } }.flatten()
 
     hypernetRegions.collect { r -> getSequences(r, 3) }.flatten().any { s ->
       s in abaSequences.collect { getBab(it) }
