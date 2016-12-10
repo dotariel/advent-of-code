@@ -6,4 +6,12 @@ class InputReader {
 
     return new File(input.path).text
   }
+
+  public static List<String> readAsList(String resourcePath) {
+    def lines = []
+    
+    read(resourcePath).eachLine { lines << it }
+
+    return lines
+  }
 }
